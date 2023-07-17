@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/aboutstyle.css' %}">
+    <title>About Us</title>
+
+    <style>
+    a:link, a:visited {
+  background-color:limegreen;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:lightgreen;
+}
+    </style>
+</head>
+<body >
+
+    <br>
+    <div align="right">
+    <a href="http://127.0.0.1:8000/home/">Home</a>
+</div>
+    <div class="container">
+        <h1>About Us</h1>
+        
+        <div class="image">
+            <img src="{% static 'images/about.jpeg'%}" alt="laptop">
+        </div>
+        <h3>
+            Our website mainly focuses on crop recommendation based on the  season<br>
+            and soil type.the recommended crop gives the better yield to the farmer and <br>
+            increases productivity and this increases the income to the farmer.So to ach<br>
+            ieve this we 4 members decided to build a website that helps the farmers alot<br>
+        </h3>
+    </div>
+</body>
+    

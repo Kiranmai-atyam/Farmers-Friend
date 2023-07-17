@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>crop</title>
+    <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+    <style>
+        body{
+            color: green;
+        }
+        a:link, a:visited {
+  background-color:limegreen;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:lightgreen;
+}
+.home{
+
+}
+
+    </style>
+    
+</head>
+</head>
+<body style="background-color:white;">
+    <div align="right" class="home">
+    <a href="http://127.0.0.1:8000/home/">Home</a>
+</div>
+    <center>
+        <h1>crop recommendation</h1>
+        <hr/>
+        <form method="POST">
+            {% csrf_token %}
+        <h2 style="text-align:">Soils</h2>
+
+        <!--<img src="{% static 'images/paddy.jpeg'%}" alt="paddy" height=3% width=4%>-->
+        
+        <input type="radio" value="Alluvial" name="soil"/><b>Alluvial</b>
+        <input type="radio" value="Terai" name="soil"/><b>Terai</b>
+        <input type="radio" value="Khadar" name="soil"/><b>khadar</b>
+        <input type="radio" value="Black" name="soil"/><b>Black</b>
+        <input type="radio" value="Red and Yellow" name="soil"/><b>Red and Yellow</b>
+        <input type="radio" value="Laterite" name="soil"/><b>Laterite</b>
+        <input type="radio" value="Arid" name="soil"/><b>Arid</b>
+        <input type="radio" value="Mountain and Forest" name="soil"/><b>Mountain and Forest</b>
+        <input type="radio" value="Desert" name="soil"/><b>Desert</b><br>
+        <h2>Time Period</h2>
+        
+        <input type="radio" value="mar-jun" name="season"/><b>Mar-jun</b>
+        <input type="radio" value="jun-oct" name="season"/><b>jun-oct</b>
+        <input type="radio" value="oct-dec" name="season"/><b>oct-dec</b><br><br>
+        <input type="submit" value="Know Your Crop"/><br><br>
+        <table border="1">
+            {% for showdata in data %}
+            <tr>
+                <td><h2 style="color: Blue">{{showdata.crop}}</h2></td>
+            </tr>
+            </table><br>
+                {% if showdata.image %}
+                
+                    <img src="{{ showdata.image.url }}" alt="image" height="525px" width="525px">
+                
+                {% else %}
+                
+                    <img src="{% static 'images/index2.jpg'%}" height="250px" width="250px">
+                
+                {% endif %}
+            
+            {% endfor %}
+        
+    </form>
+<br>
+<div class="home">
+    <a href="/crops/">To know more about crop click on the link below</a>
+    <!--<img align="bottom" src="{% static 'images/index2.jpg'%}" width="1500" height="290" >-->
+</div>
+    </center>
+</body>
+</html>

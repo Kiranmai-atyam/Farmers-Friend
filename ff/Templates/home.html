@@ -1,0 +1,129 @@
+{% load static %}
+<html>
+<head>
+	<title>Home page</title>
+	<link rel="stylesheet" href="{% static 'css/style3.css' %}">
+	<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,1,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-scrollbar
+{
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.vertical-menu {
+  width: 200px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.vertical-menu a{
+  background-color: #fff;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover{
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="navbar">
+			<img src="{% static 'images/logoo.jpeg'%}" class="logo">
+			<ul>
+			<li><a href="/home/">Home</a></li>
+			<li><a href="http://127.0.0.1:8000/croprecomendation/">Know Your Crop</a></li>
+			<li><a href="/video/">Videos</a></li>
+			<li><a href="/indexform/">Add data</a></li>
+			{% if user.is_authenticated %}
+			<li><h2 style="color:red">Hi,{{user.username}}<h2></li>
+			<li><a href="/logout/">Logout</a></li>
+			{% else %}
+			<li><a href="/login/">Login</a></li>
+			{% endif %}
+<div class="dropdown">
+  <button class="dropbtn">Crop Info</button>
+  <div class="dropdown-content">
+  	<div class="vertical-menu">
+    <a href="/rice/">Rice</a>
+    <a href="/wheat/">Wheat</a>
+    <a href="/sugarcane/">SugarCane</a>
+    <a href="/cotton/">Cotton</a>
+    <a href="/maize/">Maize</a>
+    <a href="/coffee/">coffee</a>
+    <a href="/tea/">tea</a>
+    <a href="/barley/">barley</a>
+    <a href="/coconut/">coconut</a>
+    <a href="/fruits/">fruits</a>
+    <a href="/cashew/">cashew</a>
+    <a href="/pulses/">pulses</a>
+    <a href="/jowar/">jowar</a>
+    <a href="/millets/">millets</a>
+    <a href="/groundnut/">groundnut</a>
+    <a href="/jute/">jute</a>
+    <a href="/cotton/">cotton</a>
+    <a href="/sunflower/">sunflower</a>
+    <a href="/cereals/">cereals</a>
+    <a href="/cereals/">vegetables</a>
+    <a href="/cereals/">potato</a>
+  </div>
+  </div>
+</div>
+	</ul>
+		</div>
+		<div class="content">
+			<h1>Farmers' Friend</h1>
+			<p>A Farmers' Guide</p>
+			<div>
+            <a href="/about/">
+			<button type="button"><span></span>ABOUT US</button>
+		    </a>
+		    <a href="/contact/">
+			<button type="button"><span></span>CONTACT</button>
+		    </a>
+		</div>
+	</div>
+   
+</body>
+</html>

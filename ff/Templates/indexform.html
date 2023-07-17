@@ -1,0 +1,63 @@
+{% load static %}
+{% if user.is_authenticated and user.is_superuser %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add record</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"> 
+	
+</head>
+<body>
+	<div align="right">
+	<a href="http://127.0.0.1:8000/home/">Home</a>
+</div>
+	<div class="container card card-body col-md-6 mt-3">
+		
+		<h2 class="aler alert-success text-center">Add Record</h2>
+			<form avtion="" method="POST" enctype="multipart/form-data" style="background-color: white;">
+				{% csrf_token %}
+			   <div class="form group">
+			   	  <label for="soil">soil:</label>
+			   	  <input type='text' name="soil" placeholder="soil type " class="form-control my-3"id="name">
+			   	</div>
+			   	<div class="form group">
+			   	  <label for="season">season:</label>
+			   	  <input type='text' name="season" placeholder="Time Period" class="form-control my-3" id="name">
+			   	</div>
+			   	<div class="form group">
+			   	  <label for="crop">crop:</label>
+			   	  <input type='text' name="crop" placeholder="crop" class="form-control my-3" id="age">
+			   	</div>
+			   	<div class="form group">
+			   	  <label for="name">Image:</label>
+			   	  <input type='file' name="image" placeholder="Image" class="form-control my-3" id="email">
+			   	</div>
+			   	<div class="form group"> 
+			   	   <input type="submit" value="Add Data" class="form-control btn btn-outline-success btn-md-mt-4">
+			</form>
+		</div>
+	</div>
+
+{% else %}
+
+<div class="container" style="text-align:center;margin-top: 250px;" >
+	<h1 style="color:red">sorry,you have no access <span style='font-size:30px;'>&#128532;</span></h1>
+</div>
+{% endif %}
+<style>
+		a:link, a:visited {
+  background-color:limegreen;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:lightgreen;
+}
+	</style>
+	
+</body>
+</html>

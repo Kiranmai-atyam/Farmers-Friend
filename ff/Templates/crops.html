@@ -1,0 +1,100 @@
+{% load static %}
+<html>
+<head>
+	<title>crops</title>
+    <style>
+    .hi:link, .hi:visited {
+  background-color:limegreen;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hi:hover, .hi:active {
+  background-color:lightgreen;
+}
+    </style>
+</head>
+<body style="background-color:azure;">
+    <div class="hi"align="right">
+    <a href="http://127.0.0.1:8000/home/">Home</a>
+</div>
+    <h1 style="text-align: center; color: blue;">Click on Crops Images</h1>
+<table style="border-spacing: 40px;">
+	<tr>
+		<td style="padding: 30px;">
+    <h3 style="text-align: center;>">Rice</h3>
+	<a href="/rice/" style="text-decoration: none;"><img src="{% static 'images/rice-crop.jpeg'%}"   border="2px"width="250" height="250"></a><br></td>
+	<td style="padding: 20px;">
+        <h3 style="text-align: center;">Wheat</h3>
+    <a href="/wheat/" style="text-decoration: none;"><img src="{% static 'images/wheat.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+<td style="padding: 20px;">
+    <h3 style="text-align: center;">Sugarcane</h3>
+    <a href="/sugarcane/"style="text-decoration: none;"><img src="{% static 'images/sc.jpeg'%}" border="2px"  width="250" height="250"></a><br></td>
+<td style="padding: 20px;">
+    <h3 style="text-align: center;">Cotton</h3>
+    <a href="/cotton/"><img src="{% static 'images/cotton.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+
+</tr>
+<tr><td style="padding: 30px;">
+    <h3 style="text-align: center;">Sunflower</h3>
+    <a href="/sunflower/"><img src="{% static 'images/sunflower.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+        <h3 style="text-align: center;">Tea</h3>
+    <a href="/tea/"><img src="{% static 'images/tea.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+        <h3 style="text-align: center;">Coffee</h3>
+    <a href="/coffee/"><img src="{% static 'images/coffee.jpeg'%}" border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+        <h3 style="text-align: center;">Cereals</h3>
+    <a href="/cereals/"><img src="{% static 'images/cereals.jpeg'%}"   border="2px" width="250" height="250"></a><br></td>
+</tr>
+    <tr>
+        <td style="padding: 30px;">
+    <h3 style="text-align: center;">Groundnut</h3>
+    <a href="/groundnut/"><img src="{% static 'images/groundnutmap.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Barley</h3>
+    <a href="/barley/"><img src="{% static 'images/barley.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Oilseeds</h3>
+    <a href="/oilseeds/"><img src="{% static 'images/oilseeds.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Millets</h3>
+    <a href="/millets/"><img src="{% static 'images/millets.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+</tr>
+<tr>
+    <tr>
+        <td style="padding: 30px;">
+    <h3 style="text-align: center;">Jute</h3>
+    <a href="/jute/"><img src="{% static 'images/jute.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Vegetables</h3>
+    <a href="/vegetables/"><img src="{% static 'images/vegetables.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Fruits</h3>
+    <a href="/fruits/"><img src="{% static 'images/fruits.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Potato</h3>
+    <a href="/potato/"><img src="{% static 'images/potato.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+</tr>
+</tr>
+    <tr>
+        <td style="padding: 30px;">
+    <h3 style="text-align: center;">Maize</h3>
+    <a href="/maize/"><img src="{% static 'images/maize.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Barley</h3>
+    <a href="/jowar/"><img src="{% static 'images/jowar.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Oilseeds</h3>
+    <a href="/pulses/"><img src="{% static 'images/pulses.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+    <td style="padding: 30px;">
+    <h3 style="text-align: center;">Cashew</h3>
+    <a href="/cashew/"><img src="{% static 'images/cashew.jpeg'%}"  border="2px" width="250" height="250"></a><br></td>
+</tr>
+</table>
+ </body>
+ </html>
